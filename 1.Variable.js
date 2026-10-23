@@ -1,0 +1,12 @@
+var markeA = 10;
+var markeB = 20;
+console.log("sum :", markeA + markeB);
+console.log("substract :", markeA - markeB);
+console.log("Multiplay :", markeA * markeB);
+let boyName = "Deepak";
+let girlName = "safna";
+console.log("boyname :", boyName);
+console.log("girlname :", girlName);
+let isPassed = true;
+console.log("bool status check :", isPassed);
+export {};
