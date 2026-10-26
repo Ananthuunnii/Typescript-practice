@@ -1,8 +1,8 @@
-<h1>⚡ My Daily TS Journey</h1>
-<p>I am coding <strong>JavaScript</strong> every day to build my superpowers! 🧪</p>
+<h1>⚡ My Daily TypeScript Journey</h1>
+<p>I am coding <strong>TypeScript</strong> every day to build my superpowers! 🧪</p>
 <p>🚀 <em>Current Streak: 3 Days and counting!</em></p>
 
-<h2> <em>things i need to remember by ppraticing the Typescript</em></h2>
+<h2> <em>things i need to remember by praticing the Typescript</em></h2>
 <p>🚀 <em>1.setup the tsconfig.json the file contain like bellow <br>
 "  {<br>
     "compileOnSave":true,<br>
