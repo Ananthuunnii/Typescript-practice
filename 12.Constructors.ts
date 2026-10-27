@@ -53,10 +53,13 @@ class Car{
     model:string;
     constructor(ibrand:string,imodel:string){
         this.brand = ibrand;
-
-        
+        this.model = imodel;
     }
 }
+
+let car = new Car("BMW","Q300")
+console.log(car.brand)
+console.log(car.model)
 
 
 

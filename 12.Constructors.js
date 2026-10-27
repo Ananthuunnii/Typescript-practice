@@ -29,6 +29,10 @@ let produc_2 = new Products(608, "tablet-IBall", 134000);
 class Car {
     constructor(ibrand, imodel) {
         this.brand = ibrand;
+        this.model = imodel;
     }
 }
+let car = new Car("BMW", "Q300");
+console.log(car.brand);
+console.log(car.model);
 export {};
