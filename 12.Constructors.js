@@ -31,8 +31,14 @@ class Car {
         this.brand = ibrand;
         this.model = imodel;
     }
+    start() {
+        console.log(this.brand + " " + this.model + " started");
+    }
 }
-let car = new Car("BMW", "Q300");
-console.log(car.brand);
-console.log(car.model);
+let car_1 = new Car("BMW", "Q300");
+console.log(car_1.brand);
+console.log(car_1.model);
+car_1.start();
+let car_2 = new Car("KIA", "Seltos");
+car_2.start();
 export {};
