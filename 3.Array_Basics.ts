@@ -50,3 +50,15 @@ for (let subject of subjects){
 //Array with mix value
 
 let customerDetails : any[]=["vasu",37,"M","single"]
+
+
+// foreach loop       // iteration using arrow function
+subjects.forEach(sub=>{
+    console.log(sub)
+})
+
+
+// normal for loop return the index of the array
+for(let i = 0;i<subjects.length;i++){
+    console.log(subjects[i]);
+}
