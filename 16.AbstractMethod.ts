@@ -56,7 +56,7 @@ veh.stop();
 
 let hev = new morotCycle;
 hev.start();
-veh.stop();
+hev.stop();
 
 
 

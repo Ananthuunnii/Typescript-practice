@@ -98,5 +98,246 @@ var Delivery;
     Delivery["delivered"] = "Delivered";
     Delivery["cancelled"] = "Cencelled";
 })(Delivery || (Delivery = {}));
-export {};
 // console.log(Delivery)
+// enum 
+// enum orderstatus{
+//     order = "order ready",
+//     recived = "order is recived",
+//     cancel = "order cancled",
+//     shiped = "order on the way"
+// }
+var delivered;
+(function (delivered) {
+    delivered[delivered["orderplcaed"] = 101] = "orderplcaed";
+    delivered[delivered["ordershipped"] = 102] = "ordershipped";
+    delivered[delivered["ordercancled"] = 103] = "ordercancled";
+    delivered[delivered["orderarraved"] = 104] = "orderarraved";
+})(delivered || (delivered = {}));
+// console.log(delivered)
+// console.log(delivered.orderarraved)
+function greetings() {
+    console.log("hello there");
+}
+// greetings()
+function salarytotal(a, b) {
+    return a + b;
+}
+// console.log(salarytotal(60000,15000))
+function jiocompanydetsils(name, age) {
+    // console.log(`the name is ${name} and age is ::; ${age}`);
+}
+var jiocumdata = jiocompanydetsils("koya", 59);
+// console.log(jiocumdata)
+const mycompanydata = (a, b) => {
+    return a + b;
+};
+// console.log(mycompanydata(10,50))
+function calculatecombill(salary, bornus) {
+    return salary + bornus;
+}
+let theTotalBill = calculatecombill(90000, 8000);
+// console.log(theTotalBill)
+//object
+let laptopdetails = {
+    id: 5671001,
+    name: "asuze",
+    problem: "sound not working good"
+};
+// console.log(laptopdetails)
+let mycusdataout = {
+    myid: 1001,
+    name: "guru",
+    age: 30
+};
+// console.log(mycusdataout)
+function displayempdata(emp) {
+    console.log("the id is", emp["id"]);
+    console.log("the id is", emp.name);
+}
+// displayempdata({id:2002,name:"amegos"})
+let some1course = {
+    coursename: "fullstack engineer",
+    students: ["wrongs", "seeding", "shark"]
+};
+let mysmallworld = {
+    id: 4001,
+    worldname: "little kerala",
+    age: 32,
+    place: "underground",
+    working: true
+};
+function personalDetiails(pdetails) {
+    console.log("the person id", pdetails.id);
+    console.log("the person name", pdetails.name);
+    console.log("the person age", pdetails.age);
+}
+let age = 45;
+let mystudent_1 = {
+    id: 3004,
+    name: "ajay",
+    age: 39
+};
+let mystudent_2 = {
+    id: 3005,
+    name: "vysh",
+    age: 29
+};
+// console.log(mystudent_1)
+// console.log(mystudent_2)
+let mysecstudent;
+mysecstudent = "abcdfeg";
+function displayuniortype1(userid) {
+    console.log("the user id", userid);
+}
+// displayuniortype1("onetwothree")
+let myvaluearr;
+myvaluearr = [1, "abc", "rty", 1995];
+let myfirstorder = "pending";
+class myclassroom {
+    constructor() {
+        this.id = 1;
+        this.name = "don";
+        console.log(this.id, this.name);
+    }
+}
+// let mcr1 = new myclassroom
+class employeejio {
+    constructor() {
+        this.id = 4000;
+        this.name = "ambani";
+    }
+    display() {
+        console.log("the id is :", this.id);
+        console.log("the id is :", this.name);
+    }
+}
+// let empjio = new employeejio()
+// empjio.display();
+// constructor
+class myjiostudent {
+    constructor(cid, cname) {
+        this.id = cid;
+        this.name = cname;
+    }
+    display() {
+        console.log("inside the constructor id :", this.id);
+        console.log("inside the constructor name :", this.name);
+    }
+}
+let mjs = new myjiostudent(3001, "selena james");
+// mjs.display()
+// in class access modifiers
+class indianbank {
+    constructor(cbalance = 0, caccoundtype = "savings") {
+        this.balance = cbalance;
+        this.accounttype = caccoundtype;
+    }
+    display() {
+        console.log("the display out of balance :", this.balance);
+        console.log("the display out of account type :", this.accounttype);
+    }
+}
+let idbk = new indianbank();
+// idbk.display()
+// console.log(idbk.accounttype)
+class bankperson {
+    constructor() {
+        this.accountholder = "kridhik";
+        this.usercode = 2345432;
+    }
+}
+class bankowner extends bankperson {
+    display() {
+        console.log("the bankperson :", this.usercode);
+    }
+}
+let bkor = new bankowner();
+// bkor.display()
+// console.log(bkor.accountholder)
+// -- abstract method
+class Animal {
+    eat() {
+        console.log("animal eating");
+    }
+}
+class dog extends Animal {
+    sound() {
+        console.log("dog making sound");
+    }
+}
+let someonedog = new dog;
+// someonedog.sound()
+// abstract method
+class Vehicle {
+    stop() {
+        console.log("Vehicle is stopped");
+    }
+}
+class Car extends Vehicle {
+    start() {
+        console.log("Car Start");
+    }
+}
+class morotCycle extends Vehicle {
+    start() {
+        console.log("motor cycle start");
+    }
+}
+class computershop {
+    constructor() {
+        this.size = "50cm";
+    }
+    printer() {
+        console.log("printing");
+    }
+    scanner() {
+        console.log("scanning ");
+        console.log("scanning size :", this.size);
+    }
+}
+let comshop = new computershop();
+// comshop.printer()
+// comshop.scanner()
+function displayTV(name, age) {
+    return name;
+}
+let tvdis = displayTV("manu", 32);
+console.log(tvdis);
+function printmyarray(items) {
+    for (let i of items) {
+        console.log(i);
+    }
+}
+// printmyarray<number>([1,2,3,4,5,6])
+var grate_company;
+(function (grate_company) {
+    function display() {
+        console.log("welcome to big bucket company");
+    }
+    function printcompanyname() {
+        console.log("big baskect");
+    }
+    grate_company.printcompanyname = printcompanyname;
+})(grate_company || (grate_company = {}));
+grate_company.printcompanyname();
+let customerDetails = ["vasu", 37, "M", "single"];
+customerDetails.forEach((i) => {
+    console.log(i);
+});
+let subjects = ["html", "css", "typescript"];
+for (let i = 0; i < subjects.length; i++) {
+    console.log(subjects[i]);
+}
+// array be like
+let wildanimals = [1, "lion", "elephand", "tiger", "deer"];
+// tuple
+let wildbirds = ["crow", "eggel", "pegion"];
+var cargarage;
+(function (cargarage) {
+    cargarage[cargarage["bmw"] = 1] = "bmw";
+    cargarage[cargarage["audi"] = 2] = "audi";
+    cargarage[cargarage["benz"] = 3] = "benz";
+    cargarage[cargarage["toyato"] = 4] = "toyato";
+    cargarage[cargarage["lembo"] = 5] = "lembo";
+})(cargarage || (cargarage = {}));
+export {};

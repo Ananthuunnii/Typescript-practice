@@ -26,7 +26,7 @@ class Employee{
         this.name = ename;//                          |
     }//                                               |
 } //                                                  |
-let emp = new Employee(10002,"gowtham");// -------
+let emp = new Employee(10002,"gowtham");// ------------
 
 console.log("employ id data :",emp.id)
 console.log("employ name data :",emp.name)

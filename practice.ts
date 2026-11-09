@@ -132,5 +132,367 @@ enum Delivery{
 }
 // console.log(Delivery)
 
+// enum 
+// enum orderstatus{
+//     order = "order ready",
+//     recived = "order is recived",
+//     cancel = "order cancled",
+//     shiped = "order on the way"
+// }
+
+enum delivered{
+    orderplcaed = 101,
+    ordershipped = 102,
+    ordercancled = 103,
+    orderarraved = 104,
+}
+
+// console.log(delivered)
+// console.log(delivered.orderarraved)
+
+function greetings():void{
+    console.log("hello there")
+}
+
+// greetings()
+function salarytotal(a:number,b:number):number{
+    return a+b
+}
+
+// console.log(salarytotal(60000,15000))
+
+function jiocompanydetsils(name:string,age:number):void{
+    // console.log(`the name is ${name} and age is ::; ${age}`);
+}
+var jiocumdata:any = jiocompanydetsils("koya",59)
+
+// console.log(jiocumdata)
 
 
+const mycompanydata:any = (a:number,b:number):number =>{
+    return a+b;
+}
+// console.log(mycompanydata(10,50))
+
+function calculatecombill(salary:number,bornus:number):number{
+    return salary+bornus 
+}
+let theTotalBill:number = calculatecombill(90000,8000)
+// console.log(theTotalBill)
+
+//object
+let laptopdetails :{id:number,name:string,problem:string}={
+    id:5671001,
+    name:"asuze",
+    problem:"sound not working good"
+}
+// console.log(laptopdetails)
+
+
+let mycusdataout :{myid:number,name:string,age:number}={
+    myid : 1001,
+    name : "guru",
+    age : 30
+}
+// console.log(mycusdataout)
+
+function displayempdata(emp:{id:number,name:string}):void{
+    console.log("the id is",emp["id"])
+    console.log("the id is",emp.name)
+}
+// displayempdata({id:2002,name:"amegos"})
+
+let some1course :{coursename:string,students:string[]}={
+    coursename:"fullstack engineer",
+    students:["wrongs","seeding","shark"]
+}
+
+// ----------------  wwe way to  declare data type
+
+interface Mysmallworld{
+    id:number,
+    worldname:string,
+    age:number,
+    place:string,
+    working:boolean
+}
+
+let mysmallworld:Mysmallworld = {
+    id:4001,
+    worldname:"little kerala",
+    age :32,
+    place :"underground",
+    working:true
+}
+// console.log(mysmallworld)
+
+interface PersDetails{
+    id:number,
+    name:string,
+    age:number
+}
+function personalDetiails(pdetails:PersDetails){
+    console.log("the person id",pdetails.id)
+    console.log("the person name",pdetails.name)
+    console.log("the person age",pdetails.age)
+}
+
+// let persDetiails :PersDetails = {
+    
+// }
+// personalDetiails({id: 701, name:"lion", age:88})
+
+
+// the object in alias 
+type Age = number;
+
+let age:Age = 45;
+
+type student = {
+    id:number,
+    name:string,
+    age:number
+}
+let mystudent_1 :student={
+    id:3004,
+    name:"ajay",
+    age:39
+}
+let mystudent_2 :student = {
+    id:3005,
+    name:"vysh",
+    age:29
+}
+// console.log(mystudent_1)
+// console.log(mystudent_2)
+
+let mysecstudent : number | string;
+mysecstudent = "abcdfeg";
+
+function displayuniortype1(userid:number | string):void{
+    console.log("the user id",userid)
+}
+// displayuniortype1("onetwothree")
+
+
+let myvaluearr :(number | string)[];
+myvaluearr = [1,"abc","rty",1995]
+
+
+//applay union type to type alieas
+
+
+type mypaymentstatus = "pending" | "failed" | "success";
+
+type orderstatuss = "pending" | "faile" | "success";
+
+let myfirstorder :orderstatuss = "pending"
+
+
+class myclassroom{
+    id:number;
+    name:string;
+    constructor(){
+        this.id = 1
+        this.name = "don"
+        console.log(this.id,this.name)
+    }
+}
+
+// let mcr1 = new myclassroom
+
+
+class employeejio{
+    id:number = 4000;
+    name:string="ambani"
+    display():void{
+        console.log("the id is :",this.id);
+        console.log("the id is :",this.name);
+    }
+}
+
+// let empjio = new employeejio()
+// empjio.display();
+
+
+
+// constructor
+
+class myjiostudent{
+    id:number;
+    name:string;
+    constructor(cid:number,cname:string){
+        this.id = cid;
+        this.name = cname
+    }
+    display():void{
+        console.log("inside the constructor id :",this.id)
+        console.log("inside the constructor name :",this.name)
+    }
+}
+
+let mjs = new myjiostudent(3001,"selena james")
+// mjs.display()
+
+// in class access modifiers
+
+class indianbank{
+    private balance:number;
+    public accounttype:string;
+    constructor(cbalance = 0,caccoundtype = "savings"){
+        this.balance = cbalance
+        this.accounttype = caccoundtype
+    }
+    display():void{
+        console.log("the display out of balance :",this.balance)
+        console.log("the display out of account type :",this.accounttype)
+    }
+    
+}
+let idbk = new indianbank()
+// idbk.display()
+// console.log(idbk.accounttype)
+
+class bankperson{
+    public readonly accountholder:string = "kridhik"
+    protected usercode:number | string = 2345432;
+
+}
+
+class bankowner extends bankperson{
+    display():void{
+        console.log("the bankperson :",this.usercode)
+    }
+}
+let bkor = new bankowner()
+// bkor.display()
+// console.log(bkor.accountholder)
+
+
+// -- abstract method
+
+abstract class Animal{
+    abstract sound():void
+    eat():void{
+        console.log("animal eating")
+    }
+}
+class dog extends Animal{
+    override sound():void{
+        console.log("dog making sound")
+    }
+}
+
+let someonedog = new dog;
+// someonedog.sound()
+
+
+// abstract method
+
+abstract class Vehicle{             
+    abstract start():void
+    stop():void{
+        console.log("Vehicle is stopped")
+    }
+}
+class Car extends Vehicle{
+    override start():void{                  
+        console.log("Car Start")
+    }
+}
+class morotCycle extends Vehicle{
+    override start():void{                         
+        console.log("motor cycle start")
+    }
+}
+
+// let veh = new Car;
+// veh.start();
+// veh.stop();
+
+// let hev = new morotCycle;
+// hev.start();
+// hev.stop();
+
+
+
+
+// interface
+
+interface myiscanner{
+    scanner():void,
+    size:string
+}
+
+interface myiprinter{
+    printer():void
+}
+
+class computershop implements myiscanner,myiprinter{
+    size = "50cm"
+    printer():void{
+        console.log("printing")
+    }
+    scanner(): void {
+        
+        console.log("scanning ")
+        console.log("scanning size :",this.size)
+    }
+}
+
+let comshop = new computershop()
+// comshop.printer()
+// comshop.scanner()
+
+
+
+function displayTV<T1,T2>(name:T1,age:T2):T1{
+    return name
+}
+let tvdis:string | number = displayTV<string,number>("manu",32)
+console.log(tvdis)
+
+
+function printmyarray<T>(items:T[]){
+    for(let i of items){
+        console.log(i)
+    }
+}
+// printmyarray<number>([1,2,3,4,5,6])
+
+
+namespace grate_company{
+    function display():void{
+        console.log("welcome to big bucket company")
+    }
+    export function printcompanyname():void{
+        console.log("big baskect")
+    }
+}
+grate_company.printcompanyname()
+
+let customerDetails : any[]=["vasu",37,"M","single"]
+
+customerDetails.forEach((i)=>{
+    console.log(i)
+})
+let subjects:string[] = ["html","css","typescript"]
+for(let i:number = 0;i<subjects.length;i++){
+    console.log(subjects[i]);
+}
+
+// array be like
+
+let wildanimals:(string|number)[] = [1,"lion","elephand","tiger","deer"]
+
+
+// tuple
+let wildbirds:[string,string,string] = ["crow","eggel","pegion"]
+
+enum cargarage{
+    bmw = 1,
+    audi = 2,
+    benz = 3,
+    toyato = 4,
+    lembo = 5
+}

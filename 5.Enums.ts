@@ -57,11 +57,3 @@ enum orderStatus {
 let order = orderStatus.Delivered
 console.log("the order status is :",order)
 
-
-
-
-
-
-
-
-
